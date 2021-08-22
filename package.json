@@ -5,7 +5,9 @@
   "main": "bmi_calc.js",
   "scripts": {
     "start": "node bmi_calc.js",
-    "test": "mocha --timeout 10000"
+    "start-server": "npm start",
+    "test": "mocha --timeout 10000",
+    "ci": "start-server-and-test start-server http://localhost:3000 test"
   },
   "keywords": [
     "bmi",
@@ -17,6 +19,7 @@
     "chai": "4.2.0",
     "chai-http": "4.2.1",
     "mocha": "5.2.0",
+    "start-server-and-test": "^1.13.1",
     "supertest": "^1.0.1"
   },
   "dependencies": {
